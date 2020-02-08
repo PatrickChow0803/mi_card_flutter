@@ -19,7 +19,19 @@ class MyApp extends StatelessWidget {
                 backgroundImage: AssetImage('images/profilepic.jpg'),
               ),
               Text('Patrick Chow',
-                  style: TextStyle(fontSize: 40.0, color: Colors.white))
+                  style: TextStyle(
+                      fontSize: 40.0,
+                      color: Colors.white,
+                      fontFamily: 'Pacifico')),
+              Text(
+                'FLUTTER DEVELOPER',
+                style: TextStyle(
+                  fontFamily: 'SourceSansPro',
+                  color: Colors.tealAccent,
+                  fontSize: 20.0,
+                  letterSpacing: 2.5,
+                ),
+              )
             ],
           ),
         ),
