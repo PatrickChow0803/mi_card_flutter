@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.red,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
                 radius: 50.0,
@@ -32,50 +33,44 @@ class MyApp extends StatelessWidget {
                   letterSpacing: 2.5,
                 ),
               ),
-              Container(
-                padding: EdgeInsets.all(10.0),
-                color: Colors.white,
-                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
+              SizedBox(
+                height: 10,
+                width: 150,
+                child: Divider(
+                  color: Colors.blue,
+                ),
+              ),
+              Card(
+                  margin:
+                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                  child: ListTile(
+                    leading: Icon(
 //                      Refer to https://www.materialpalette.com/icons for what the icons look like
                       Icons.phone,
                     ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text(
+                    title: Text(
                       '646-123-8888',
                       style: TextStyle(
                           color: Colors.teal.shade900,
                           fontFamily: 'Source Sans Pro',
                           fontSize: 20.0),
                     ),
-                  ],
-                ),
-              ),
-              Container(
-                padding: EdgeInsets.all(10.0),
-                color: Colors.white,
+                  )),
+              Card(
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
+                child: ListTile(
+                  leading: Icon(
 //                      Refer to https://www.materialpalette.com/icons for what the icons look like
-                      Icons.email,
-                    ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text(
-                      'Patrick@gmail.com',
-                      style: TextStyle(
-                          color: Colors.teal.shade900,
-                          fontFamily: 'Source Sans Pro',
-                          fontSize: 20.0),
-                    ),
-                  ],
+                    Icons.email,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    'Patrick@gmail.com',
+                    style: TextStyle(
+                        color: Colors.teal.shade900,
+                        fontFamily: 'Source Sans Pro',
+                        fontSize: 20.0),
+                  ),
                 ),
               )
             ],
